@@ -1,17 +1,17 @@
 import React from 'react';
 import { GoArrowRight } from "react-icons/go";
-import baking from '../assets/img/baking.png';
-import beauty from '../assets/img/beauty.png';
-import beverages from '../assets/img/beverages.png';
-import bread from '../assets/img/bread.png';
-import cooking from '../assets/img/cooking.png';
-import diabetic from '../assets/img/diabetic.png';
-import dish from '../assets/img/dish.png';
-import freshfruits from '../assets/img/freshfruits.png';
-import freshvegetables from '../assets/img/freshvegetables.png';
-import meat from '../assets/img/meat.png';
-import oil from '../assets/img/oil.png';
-import snacks from '../assets/img/snacks.png';
+import baking from '../../assets/img/baking.png';
+import beauty from '../../assets/img/beauty.png';
+import beverages from '../../assets/img/beverages.png';
+import bread from '../../assets/img/bread.png';
+import cooking from '../../assets/img/cooking.png';
+import diabetic from '../../assets/img/diabetic.png';
+import dish from '../../assets/img/dish.png';
+import freshfruits from '../../assets/img/freshfruits.png';
+import freshvegetables from '../../assets/img/freshvegetables.png';
+import meat from '../../assets/img/meat.png';
+import oil from '../../assets/img/oil.png';
+import snacks from '../../assets/img/snacks.png';
 
 function Popular() {
   return (
@@ -40,15 +40,15 @@ function Popular() {
     // </section>
         <section className="mt-5 mb-2 md:container md:mx-auto md:px-28">
       <div className="">
-        <div className="flex justify-between">
+        <div className="md:flex justify-between">
           <div className="text-xl font-medium">Popular Categories</div>
-          <div className="flex items-center gap-2 text-primary">
+          <div className="md:flex items-center gap-2 text-primary">
             View All <GoArrowRight />
           </div>
         </div>
-        <div className="m-auto grid grid-cols-6 gap-4 mt-4">
+        <div className="m-auto md:grid grid-cols-6 gap-4 mt-4">
           {data.map((item, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <div key={index} className="md:flex flex-col items-center">
               <div className='border-2 hover:border-[#20B526] shadow-md'>
               <img src={item.img} alt="" className="" />
               <p className='text-center'>{item.title}</p>

@@ -1,17 +1,18 @@
 import "./App.css";
-import Banner from "./components/Banner";
-import Brands from "./components/Brands";
-import Categories from "./components/Categories";
-import Feature from "./components/Feature";
-import Follow from "./components/Follow";
-import Homebanner from "./components/Homebanner";
-import Hotdeals from "./components/Hotdeals";
-import Navbar from "./components/Navbar";
-import News from "./components/News";
-import Popular from "./components/Popular";
-import Products from "./components/Products";
-import Subscribe from "./components/Subscribe";
-import Summersale from "./components/Summersale";
+import Banner from "../src/components/Homepage/Banner";
+import Brands from "../src/components/Homepage/Brands";
+import Categories from "../src/components/Homepage/Categories";
+import Client from "../src/components/Homepage/Client";
+import Feature from "../src/components/Homepage/Feature";
+import Follow from "../src/components/Homepage/Follow";
+import Homebanner from "../src/components/Homepage/Homebanner";
+import Hotdeals from "../src/components/Homepage/Hotdeals";
+import Navbar from "../src/components/Homepage/Navbar";
+import News from "../src/components/Homepage/News";
+import Popular from "../src/components/Homepage/Popular";
+import Products from "../src/components/Homepage/Products";
+
+import Summersale from "../src/components/Homepage/Summersale";
 
 function Home() {
   return (
@@ -26,9 +27,10 @@ function Home() {
       <Summersale/>
       <Feature/>
       <News/>
+      <Client/>
       <Brands/>
       <Follow/>
-      <Subscribe/>
+      
     </>
   );
 }

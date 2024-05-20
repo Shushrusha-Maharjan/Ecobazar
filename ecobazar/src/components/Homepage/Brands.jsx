@@ -1,10 +1,10 @@
 import React from "react";
-import foods from "../assets/img/foods.png";
-import food from "../assets/img/food.png";
-import bookoff from "../assets/img/bookoff.png";
-import Group from "../assets/img/Group.png";
-import mangos from "../assets/img/mangos.png";
-import steps from "../assets/img/steps.png";
+import foods from "../../assets/img/foods.png";
+import food from "../../assets/img/food.png";
+import bookoff from "../../assets/img/bookoff.png";
+import Group from "../../assets/img/Group.png";
+import mangos from "../../assets/img/mangos.png";
+import steps from "../../assets/img/steps.png";
 import { LuTally1 } from "react-icons/lu";
 
 const data = [
@@ -32,13 +32,13 @@ function Brands() {
     <section className="mt-5 mb-2 md:container md:mx-auto md:px-28">
       <div className="flex items-center justify-between">
         {data.map((item, index) => (
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-12">
             <div className="">
               <img src={item.img} className="h-[32px]"></img>
             </div>
 
-            <div className="">
-              <LuTally1 size={20} />
+            <div className="items-center justify-between">
+              <LuTally1 size={40} color="#E6E6E6"/>
             </div>
           </div>
         ))}

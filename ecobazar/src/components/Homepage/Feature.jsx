@@ -4,7 +4,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { Rating } from "flowbite-react";
-import { data } from "../Data/Data";
+import { data } from "../../Data/Data";
 
 function Feature() {
   return (

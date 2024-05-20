@@ -1,10 +1,10 @@
 import React from 'react';
-import first from '../assets/img/first.png';
-import second from '../assets/img/second.png';
-import third from '../assets/img/third.png';
-import fourth from '../assets/img/fourth.png';
-import fifth from '../assets/img/fifth.png';
-import sixth from '../assets/img/sixth.png';
+import first from '../../assets/img/first.png';
+import second from '../../assets/img/second.png';
+import third from '../../assets/img/third.png';
+import fourth from '../../assets/img/fourth.png';
+import fifth from '../../assets/img/fifth.png';
+import sixth from '../../assets/img/sixth.png';
 
 function Follow() {
   return (

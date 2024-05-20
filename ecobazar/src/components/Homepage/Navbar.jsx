@@ -3,7 +3,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { FaAngleDown } from "react-icons/fa6";
 import { PiPlantFill } from "react-icons/pi";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
-import { CiHeart } from "react-icons/ci";
+import { GoHeart } from "react-icons/go";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { PiPhoneCall } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
@@ -20,7 +20,7 @@ function Navbar() {
   ];
 
   return (
-    <section className="">
+    <section className="container mx-auto">
       <div className="">
         <div className="border-b border-grey">
           <div className="flex justify-between mt-5 mb-2 md:container md:mx-auto md:px-28 ">
@@ -35,7 +35,11 @@ function Navbar() {
                   USD <FaAngleDown size={20} />
                 </div>
               </div>
-              <div className="item-center gap-5">Sign In / Sign Up</div>
+              <div className="item-center gap-5 flex">
+                <NavLink to="/signin" className={({isActive})=>isActive?"text-primary": "text-slate-500"}><a>SignIn</a></NavLink>
+                <div>/</div>
+                <NavLink to="/signup" className={({isActive})=>isActive?"text-primary": "text-slate-500"}><a>SignUp</a></NavLink>
+              </div>
             </div>
           </div>
         </div>
@@ -77,13 +81,15 @@ function Navbar() {
                 </div>
               </div> */}
 
-          <div className="flex items-center gap-2 ">
-            <div className="border-r-2 border-grey">
-              <CiHeart size={40} />
+          <div className="flex items-center gap-3 ">
+            <div className="border-r-2 border-grey pr-3">
+              <GoHeart size={40} />
             </div>
-            <div>
+            <div className="relative">
               <HiOutlineShoppingBag size={40} />
+              <div className="absolute w-[20px] h-[20px] rounded-full items-center justify-center bg-primary text-white mt-[-40px] ml-[20px]"><p className="text-center">2</p></div>
             </div>
+            
             <div>
               <div>Shopping Cart</div>
               <div>$57.00</div>

@@ -1,15 +1,15 @@
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
-import apple from "../assets/img/apple.png";
-import capsicum from "../assets/img/capsicum.png";
-import cauliflower from "../assets/img/cauliflower.png";
-import chilly from "../assets/img/chilly.png";
-import chinesecabbage from "../assets/img/chinesecabbage.png";
-import corn from "../assets/img/corn.png";
-import eggplant from "../assets/img/eggplant.png";
-import lettuce from "../assets/img/lettuce.png";
-import orange from "../assets/img/orange.png";
-import potato from "../assets/img/potato.png";
+import apple from "../../assets/img/apple.png";
+import capsicum from "../../assets/img/capsicum.png";
+import cauliflower from "../../assets/img/cauliflower.png";
+import chilly from "../../assets/img/chilly.png";
+import chinesecabbage from "../../assets/img/chinesecabbage.png";
+import corn from "../../assets/img/corn.png";
+import eggplant from "../../assets/img/eggplant.png";
+import lettuce from "../../assets/img/lettuce.png";
+import orange from "../../assets/img/orange.png";
+import potato from "../../assets/img/potato.png";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
@@ -27,10 +27,10 @@ function Products() {
           </div>
         </div>
         
-        <div className="m-auto grid grid-cols-5 mt-4">
+        <div className="m-auto md:grid grid-cols-5 mt-4">
           {data.map((item, index) => (
             <div key={index} className="group/item flex flex-col items-center relative">
-              <div className="border-[1px] hover:border-[#20B526]">
+              <div className="border-[1px]  hover:border-[#20B526] group">
                 <img src={item.img} alt="" className="" />
                 <div>
                   <p className="text-  ml-2">{item.title}</p>
@@ -60,9 +60,24 @@ function Products() {
                 
                 </p>
                 </div>
+                <div className="absolute top-4 right-4 flex flex-col justify-between">
+                <div className="group/edit invisible flex flex-col gap-3 group-hover/item:visible">
+                  <div className="group-hover/edit w-6 h-6 bg-slate-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white group-hover/edit:bg-primary">
+                    <IoHeartOutline className="" />
+                  </div>
+                  <div className="group-hover/edit w-6 h-6 bg-slate-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white group-hover/edit:bg-primary">
+                    <IoEyeOutline className="" />
+                  </div>
+                </div>
+                
+                
+              </div>
+              <div className="absolute bottom-2 right-4 w-6 h-6 bg-slate-100 rounded-full flex items-center justify-center    group-hover:bg-primary group-hover:text-white">
+                <HiOutlineShoppingBag className="" />
+                </div>
               </div>
               
-              <div className="absolute top-4 right-4 flex flex-col justify-between ">
+              {/* <div className="absolute top-4 right-4 flex flex-col justify-between ">
                 <div className="group/edit invisible flex flex-col gap-3 group-hover/item:visible">
                   <div className="group-hover/edit w-6 h-6 bg-slate-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white group-hover/edit:bg-primary">
                     <IoHeartOutline className="" />
@@ -75,7 +90,7 @@ function Products() {
                 <HiOutlineShoppingBag className="" />
                 </div>
                 
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

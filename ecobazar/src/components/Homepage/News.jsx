@@ -1,7 +1,7 @@
 import React from "react";
-import orangebg from "../assets/img/orangebg.png";
-import egg from "../assets/img/egg.png";
-import avocado from "../assets/img/avocado.png";
+import orangebg from "../../assets/img/orangebg.png";
+import egg from "../../assets/img/egg.png";
+import avocado from "../../assets/img/avocado.png";
 import { GoTag } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 import { IoPersonOutline } from "react-icons/io5";
