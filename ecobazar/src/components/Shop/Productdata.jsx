@@ -22,7 +22,8 @@ const product=[
       "price": 14.99,
       "rating": 4.5,
       "image": potato,
-      "category": "Vegetables"
+      "category": "Vegetables",
+      "tag":"Healthy",
     },
     {
       "id": 2,
@@ -30,7 +31,8 @@ const product=[
       "price": 14.99,
       "rating": 4.0,
       "image": chinesecabbage,
-      "category": "Vegetables"
+      "category": "Vegetables",
+      "tag":"Vegetarian",
     },
     {
       "id": 3,
@@ -39,6 +41,7 @@ const product=[
       "rating": 4.8,
       "image": corn,
       "category": "Vegetables",
+      "tag":"Vegetarian",
       "outOfStock": true
     },
     {
@@ -47,6 +50,7 @@ const product=[
       "price": 14.99,
       "rating": 4.2,
       "image": eggplant,
+      "tag":"Vegetarian",
       "category": "Vegetables"
     },
     {
@@ -55,6 +59,7 @@ const product=[
       "price": 14.99,
       "rating": 4.7,
       "image": cauliflower,
+      "tag":"Vegetarian",
       "category": "Vegetables"
     },
     {
@@ -63,6 +68,7 @@ const product=[
       "price": 14.99,
       "rating": 4.6,
       "image": apple,
+      "tag":"Healthy",
       "category": "Fruits"
     },
     {
@@ -71,6 +77,7 @@ const product=[
       "price": 14.99,
       "rating": 4.3,
       "image": capsicum,
+      "tag":"Dinner",
       "category": "Vegetables"
     },
     {
@@ -79,6 +86,7 @@ const product=[
       "price": 14.99,
       "rating": 4.1,
       "image": chilly,
+      "tag":"Vegetarian",
       "category": "Vegetables"
     },
     {
@@ -89,6 +97,7 @@ const product=[
       "image": Cucumber,
       "category": "Vegetables",
       "sale": true,
+      "tag":"kidfoods",
       "salePrice": 5.99
     },
     {
@@ -97,6 +106,7 @@ const product=[
       "price": 32.00,
       "rating": 4.4,
       "image": redcapsicum,
+      "tag":"bread",
       "category": "Vegetables"
     },
     {
@@ -105,6 +115,7 @@ const product=[
         "price": 32.00,
         "rating": 4.4,
         "image": Finger,
+        "tag":"Vegetarian",
         "category": "Vegetables"
       },
     {
@@ -113,6 +124,7 @@ const product=[
       "price": 14.99,
       "rating": 4.5,
       "image": lettuce,
+      "tag":"Vegetarian",
       "category": "Vegetables"
     },
     {
@@ -121,6 +133,7 @@ const product=[
       "price": 14.99,
       "rating": 4.0,
       "image": Redchilly,
+      "tag":"Vegetarian",
       "category": "Vegetables"
     },
     {
@@ -129,6 +142,7 @@ const product=[
       "price": 14.99,
       "rating": 4.3,
       "image": tomato,
+      "tag":"Vegetarian",
       "category": "Vegetables"
     },
     {
@@ -137,6 +151,7 @@ const product=[
       "price": 14.99,
       "rating": 4.6,
       "image": mango,
+      "tag":"Vegetarian",
       "category": "Fruits"
     }
   ];

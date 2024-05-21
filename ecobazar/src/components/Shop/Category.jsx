@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { FaAngleUp } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
+import Input from "../Shopcomponents/Input";
 
 const categories = [
   { name: "Fresh Fruit", total: 134 },
@@ -10,32 +13,69 @@ const categories = [
   { name: "Bread & Bakery", total: 15 },
 ];
 
-const Category = () => {
-  const [selectedCategory, setSelectedCategory] = useState( );
+const Category = ({ handleChange }) => {
+  // const [selectedCategory, setSelectedCategory] = useState();
+  const [showCategories, setShowCategories] = useState(true);
+  const handleClick = () => {
+    setShowCategories(!showCategories);
+  };
 
   return (
-    <div className="w-64 bg-white shadow rounded p-4">
-      <h2 className="text-xl font-semibold mb-4">All Categories</h2>
-      <ul className="space-y-2">
-        {categories.map((category) => (
-          <li key={category.name} className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <input
-                type="radio"
-                id={category.name}
-                name="category"
-                checked={selectedCategory === category.name}
-                onChange={() => setSelectedCategory(category.name)}
-                className="form-radio h-4 w-4 text-green-600 transition duration-150"
-              />
-              <label>
-                {category.name}
-                <span className="text-gray-600">({category.total})</span>
-              </label>
-            </div>
-          </li>
-        ))}
-      </ul>
+    <div className="w-64 bg-white shadow rounded p-4 ">
+      <div className="flex justify-between" onClick={handleClick}>
+        <div className="">
+          <h2 className="text-xl font-semibold mb-4">All Categories</h2>
+        </div>
+        <div>{showCategories ? <FaAngleUp /> : <FaAngleDown />}</div>
+      </div>
+
+      {showCategories && (
+        <ul className="space-y-2 gap-2">
+          <Input
+            name="Fresh Fruit"
+            total="(25)"
+            value="Fruits"
+            handleChange={handleChange}
+          />
+          <Input
+            name="Vegetables"
+            total="(150)"
+            value="Vegetables"
+            handleChange={handleChange}
+          />
+          <Input
+            name="Cooking"
+            total="(25)"
+            value="cooking"
+            handleChange={handleChange}
+          />
+          <Input
+            name="Snacks"
+            total="(25)"
+            value="snacks"
+            handleChange={handleChange}
+          />
+          <Input
+            name="Beverages"
+            total="(25)"
+            value="beverages"
+            handleChange={handleChange}
+          />
+          <Input
+            name="Beauty & Health"
+            total="(25)"
+            value="beauty"
+            handleChange={handleChange}
+          />
+          <Input
+            name="Bread & Bakery"
+            total="(25)"
+            value="bread"
+            handleChange={handleChange}
+          />
+          
+        </ul>
+      )}
     </div>
   );
 };

@@ -1,57 +1,45 @@
-import React from "react";
-import product from "./Productdata";
+import React from 'react';
+import { HiOutlineShoppingBag } from "react-icons/hi";
+import { IoHeartOutline } from "react-icons/io5";
+import { IoEyeOutline } from "react-icons/io5";
+import fullstar from "../../assets/img/fullstar.png";
 
-import Category from "./Category";
-import Priceslider from "./Priceslider";
-import Rating from "./Rating";
-import Tags from "./Tags";
 
-function Product({handleClick, handleChange, result }) {
+const Card = ({image,price,sale,salePrice,rating,outOfStock,name}) => {
   return (
-    <section className="mt-5 mb-2 md:container md:mx-auto md:px-28">
-      <div className="m-auto md:grid grid-cols-12">
-        <div className="col-span-3">
-          <Category handleChange={handleChange} />
-          <Priceslider />
-          <Rating />
-          <Tags handleClick={handleClick}/>
-        </div>
-        <div className="col-span-9 grid grid-cols-3 gap-3">
-          {result.map((item, index) => (
-            <div>{item}</div>
-          ))}
-          {/* {product.map((product, index) => (
+    <section>
+        
             <div
-              key={index}
+              
               className="group/item flex flex-col items-center bg-white shadow-md rounded-lg border-[1px] pb-3 relative group"
             >
-              <div className="mt-2  hover:border-[#20B526]">
-                {product.sale && (
+              <div className="mt-2 bg-slate-300 px-[-20px] hover:border-[#20B526]">
+                {sale && (
                   <div className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded absolute top-5">
                     Sale 50%
                   </div>
                 )}
-                {product.outOfStock && (
+                {outOfStock && (
                   <div className="bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded absolute top-5">
                     Out of Stock
                   </div>
                 )}
                 <img
-                  src={product.image}
-                  alt={product.name}
+                  src={image}
+                  alt={name}
                   className="w-full h-40 object-cover rounded"
                 />
                 <div className="mt-4">
-                  <h3 className="text-lg font-semibold">{product.name}</h3>
+                  <h3 className="text-lg font-semibold">{name}</h3>
                   <p className="text-gray-600">
-                    ${product.sale ? product.salePrice : product.price}
+                    ${sale ? salePrice : price}
                   </p>
                   <div className="flex items-center">
-                    <span className="text-yellow-500">
-                      {"★".repeat(Math.round(product.rating))}
+                    <span className="text-[#FFA500] text-[24px]">
+                      {"★".repeat(Math.round(rating))}
                     </span>
-                    <span className="text-gray-400">
-                      {"★".repeat(5 - Math.round(product.rating))}
+                    <span className="text-gray-400 text-[24px]">
+                      {"★".repeat(5 - Math.round(rating))}
                     </span>
                   </div>
                 </div>
@@ -70,11 +58,9 @@ function Product({handleClick, handleChange, result }) {
                 </div>
               </div>
             </div>
-          ))} */}
-        </div>
-      </div>
+          
     </section>
-  );
+  )
 }
 
-export default Product;
+export default Card

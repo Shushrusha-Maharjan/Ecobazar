@@ -12,3 +12,17 @@
 .slick-slide > div{
     margin: 0 10px;
 }
+
+.MuiSlider-thumb{
+    color: white;
+    border-color: #00B207;
+    border: #00B207;
+    border-width: 1px;
+    }
+
+.MuiSlider-track{
+    color: #00B207;
+}
+.MuiSlider-rail{
+    color: #E6E6E6;
+}
