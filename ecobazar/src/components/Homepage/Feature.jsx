@@ -17,7 +17,7 @@ function Feature() {
           </div>
         </div>
         
-        <div className="m-auto grid grid-cols-5 mt-4">
+        <div className="m-auto md:grid grid-cols-5 mt-4">
           {data.featured.map((item, index) => (
             <div key={index} className="group/item flex flex-col items-center relative">
               <div className="border-2 hover:border-[#20B526]">
@@ -36,7 +36,7 @@ function Feature() {
               ) : (
                 <></>
               )}
-              <p className='text- ml-2'>
+              <p className='text- ml-2 pb-3'>
               <div className="">
                     <Rating className="">
                       <Rating.Star fill="orange" fontSize={20} />
@@ -78,3 +78,7 @@ function Feature() {
 }
 
 export default Feature;
+
+
+
+

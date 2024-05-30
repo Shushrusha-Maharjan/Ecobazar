@@ -1,7 +1,17 @@
 import React from "react";
 import { PiSlidersHorizontalLight } from "react-icons/pi";
+import { useDispatch,useSelector } from "react-redux";
+import { sortFilter } from "../../features/slice/Productslice";
 
-const Topshop = ({result}) => {
+const Topshop = () => {
+  const products = useSelector((state) => state.products.filteredProducts);
+  // console.log(products);
+  const dispatch = useDispatch();
+  const sort = [
+    "Latest",
+    "Featured",
+    "Popular",
+  ];
   return (
     <section className="mt-5 mb-2 md:container md:mx-auto md:px-28">
       <div className="flex justify-between">
@@ -18,16 +28,27 @@ const Topshop = ({result}) => {
           </div>
           <div className="">
             <label className="mr-2">Sort by:</label>
-            <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 ">
-              <option selected>Latest</option>
-              <option value="popular">Popular</option>
-              <option value="recommended">Recommended</option>
-              <option value="feature">Feature</option>
+            <select
+              className="p-1 border rounded-md w-48 text-[#4D4D4D] text-[14px] leading-[21px] font-normal"
+              onChange={(event) => {
+                dispatch(sortFilter(event.target.value));
+              }}
+            >
+              {sort.map((item, index) => {
+                return (
+                  <option
+                    value={item}
+                    className=" p-2 hover:bg-[#2C742F] rounded-lg transition-all duration-300"
+                  >
+                    {item}
+                  </option>
+                );
+              })}
             </select>
           </div>
         </div>
         <div className="flex gap-2">
-          <p className="font-semibold">{result.length}</p>results
+          <p className="font-semibold">{products.length}</p>results
         </div>
       </div>
     </section>

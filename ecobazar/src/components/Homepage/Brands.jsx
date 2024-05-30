@@ -30,9 +30,9 @@ const data = [
 function Brands() {
   return (
     <section className="mt-5 mb-2 md:container md:mx-auto md:px-28">
-      <div className="flex items-center justify-between">
+      <div className="md:flex items-center justify-between">
         {data.map((item, index) => (
-          <div className="flex items-center justify-between gap-12">
+          <div className="md:flex items-center justify-between gap-12">
             <div className="">
               <img src={item.img} className="h-[32px]"></img>
             </div>

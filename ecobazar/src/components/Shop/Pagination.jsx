@@ -21,7 +21,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       {getPages().map((page) => (
         <button
           key={page}
-          className={`px-3 py-1 rounded ${currentPage === page ? 'bg-green-500 text-white' : 'bg-white text-black'}`}
+          className={`px-3 py-1 rounded-full ${currentPage === page ? 'bg-green-500 text-white' : 'bg-white text-black'}`}
           onClick={() => onPageChange(page)}
         >
           {page}

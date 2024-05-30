@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Pages from "../Pages";
-import Shop from "../../src/components/Shop/Shop";
+import Shop from "../Pages/Shop";
 import App from "../App";
 import Home from "../Home";
 import SignIn from "../Pages/SignIn";
 import SignUp from "../Pages/SignUp";
+import Cart from "../Pages/Cart";
+import Index from "../Pages/Index";
 
 
 const Move = createBrowserRouter([
@@ -19,6 +21,14 @@ const Move = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/single/:id",
+        element: <Index />,
       },
       {
         path: "/pages",

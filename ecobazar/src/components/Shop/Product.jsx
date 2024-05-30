@@ -1,25 +1,33 @@
 import React from "react";
 import product from "./Productdata";
-
+import {default as Filter } from "./Filter"
 import Category from "./Category";
 import Priceslider from "./Priceslider";
 import Rating from "./Rating";
 import Tags from "./Tags";
+import Discount from "./Discount";
+import SaleProducts from "./Saleproduct";
 
-function Product({handleClick, handleChange, result }) {
+function Product() {
   return (
     <section className="mt-5 mb-2 md:container md:mx-auto md:px-28">
-      <div className="m-auto md:grid grid-cols-12">
+      <div className="m-auto md:grid grid-cols-12 gap-10">
         <div className="col-span-3">
-          <Category handleChange={handleChange} />
+          <Category />
           <Priceslider />
           <Rating />
-          <Tags handleClick={handleClick}/>
+          <Tags />
+          <Discount/>
+          <SaleProducts/>
         </div>
-        <div className="col-span-9 grid grid-cols-3 gap-3">
-          {result.map((item, index) => (
+        <div className="col-span-9 ">
+          {/* <div className="grid grid-cols-3 gap-3"> */}
+          {/* {result.map((item, index) => (
             <div>{item}</div>
-          ))}
+          ))} */}
+          <Filter/>
+          {/* </div> */}
+          
           {/* {product.map((product, index) => (
             <div
               key={index}

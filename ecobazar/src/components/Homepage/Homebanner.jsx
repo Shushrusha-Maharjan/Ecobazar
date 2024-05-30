@@ -34,7 +34,7 @@ function Homebanner() {
               <p className="text-[#666666] text-[14px] mt-2">
                 Only Fruit & Vegetable
               </p>
-              <button className="buttonSecondary">
+              <button className="buttonSecondary rounded-3xl">
                 Shop Now <GoArrowRight size={20} color="primary" className="" />
               </button>
             </div>
@@ -48,7 +48,7 @@ function Homebanner() {
                 Special Products Deal of the Month
               </p>
               <div className="flex place-content-center mt-2 ">
-                <button className="buttonTertiary">
+                <button className="buttonTertiary rounded-3xl">
                   Shop Now{" "} <GoArrowRight size={20} color="primary" className="" />
                 </button>
               </div>

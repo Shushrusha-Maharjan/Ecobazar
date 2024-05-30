@@ -13,34 +13,36 @@ import redcapsicum from "../assets/img/redcapsicum.png";
 import mango from "../assets/img/mango.png";
 import apple from "../assets/img/apple.png";
 const data = {
+ 
   offerdata: [
     {
       img: chinesecabbage,
       title: `Chinese Cabbage`,
-
+hotdeals:true,
       price: `$14.99`,
       rating: `4`,
     },
     {
       img: lettuce,
       title: `Green Lettuce`,
-
+      hotdeals:true,
       price: `$14.99`,
       rating: `4`,
     },
     {
       img: eggplant,
       title: `Eggplant`,
-
+      hotdeals:true,
       price: `$14.99`,
       rating: `4`,
     },
     {
       img: cauliflower,
       title: `Cauliflower`,
-
+related:true,
       price: `$14.99`,
       rating: `4`,
+      hotdeals:true,
     },
     {
       img: capsicum,
@@ -49,32 +51,35 @@ const data = {
       price: `$14.99`,
       rating: `4`,
       sale: `Sale 50%`,
+      related:true,
+      hotdeals:true,
     },
     {
       img: chilly,
       title: `Green Chillies`,
-
+      related:true,
       price: `$14.99`,
       rating: `4`,
+      hotdeals:true,
     },
     {
       img: potato,
       title: `Potato`,
-
+      hotdeals:true,
       price: `$14.99`,
       rating: `4`,
     },
     {
       img: corn,
       title: `Corn`,
-
+      hotdeals:true,
       price: `$14.99`,
       rating: `4`,
     },
     {
       img: redcapsicum,
       title: `Red Chilly`,
-
+      hotdeals:true,
       price: `$14.99`,
       rating: `4`,
     },
@@ -85,13 +90,23 @@ const data = {
       price: `$14.99`,
       rating: `4`,
       sale: `Sale 50%`,
+      hotdeals:true,
     },
     {
       img: mango,
       title: `Mango`,
-
+      hotdeals:true,
       price: `$14.99`,
       rating: `4`,
+    },
+    {
+      img: apple,
+      title: `Green Apple`,
+      initial: `$20.99`,
+      price: `$14.99`,
+      rating: `4`,
+      sale: `Sale 50%`,
+      related:true,
     },
     
   ],
@@ -103,6 +118,7 @@ const data = {
       price: `$14.99`,
       rating: `4`,
       sale: `Sale 50%`,
+      offerone:true,
     },
   ],
   featured: [
@@ -113,32 +129,33 @@ const data = {
       price: `$14.99`,
       rating: `4`,
       sale: `Sale 50%`,
+      feature:true,
     },
     {
       img: orange,
       title: `Fresh Indian Malta`,
-
+      feature:true,
       price: `$14.99`,
       rating: `4`,
     },
     {
       img: chinesecabbage,
       title: `Chinese Cabbage`,
-
+      feature:true,
       price: `$14.99`,
       rating: `4`,
     },
     {
       img: lettuce,
       title: `Green Lettuce`,
-
+      feature:true,
       price: `$14.99`,
       rating: `4`,
     },
     {
       img: eggplant,
       title: `Eggplant`,
-
+      feature:true,
       price: `$14.99`,
       rating: `4`,
     },

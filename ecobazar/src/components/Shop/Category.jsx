@@ -30,12 +30,13 @@ const Category = ({ handleChange }) => {
       </div>
 
       {showCategories && (
-        <ul className="space-y-2 gap-2">
-          <Input
-            name="Fresh Fruit"
+        <ul className="space-y-3 gap-2">
+          <Input/>
+            {/* name="Fresh Fruit"
             total="(25)"
             value="Fruits"
             handleChange={handleChange}
+            
           />
           <Input
             name="Vegetables"
@@ -72,7 +73,7 @@ const Category = ({ handleChange }) => {
             total="(25)"
             value="bread"
             handleChange={handleChange}
-          />
+          /> */}
           
         </ul>
       )}
