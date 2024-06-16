@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from 'react';
+import { FilterContext } from '../Shop/FilterContext';
 import product from "./Productdata";
 import {default as Filter } from "./Filter"
 import Category from "./Category";
@@ -9,10 +10,11 @@ import Discount from "./Discount";
 import SaleProducts from "./Saleproduct";
 
 function Product() {
+  const { isFilterVisible, toggleFilter } = useContext(FilterContext);
   return (
     <section className="mt-5 mb-2 md:container md:mx-auto md:px-28">
-      <div className="m-auto md:grid grid-cols-12 gap-10">
-        <div className="col-span-3">
+      <div className="m-auto lg:grid grid-cols-12 gap-20">
+        <div className="hidden lg:block lg:col-span-3">
           <Category />
           <Priceslider />
           <Rating />
@@ -20,7 +22,26 @@ function Product() {
           <Discount/>
           <SaleProducts/>
         </div>
-        <div className="col-span-9 ">
+        
+     {isFilterVisible && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-20 lg:hidden"
+          onClick={toggleFilter}
+        ></div>
+      )}
+      <div
+        className={`fixed pl-3 md:top-0 top-16 left-0 h-full w-64 bg-white shadow-lg z-30 transition-transform transform duration-300 ease-in-out lg:hidden overflow-y-auto`}
+        style={{ transform: isFilterVisible ? 'translateX(0)' : 'translateX(-100%)' }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <Category />
+        <Priceslider />
+        <Rating />
+        <Tags />
+        <Discount />
+        <SaleProducts />
+      </div>
+        <div className="col-span-9">
           {/* <div className="grid grid-cols-3 gap-3"> */}
           {/* {result.map((item, index) => (
             <div>{item}</div>

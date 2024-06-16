@@ -8,9 +8,9 @@ import sixth from '../../assets/img/sixth.png';
 
 function Follow() {
   return (
-    <section className='mt-5 mb-2 md:container md:mx-auto md:px-28'>
+    <section className='mt-5 mb-2 md:container md:mx-auto lg:px-28 md:px-10'>
         <div className='items-center justify-center'>
-            <p className='text-[32px] text-center font-semibold'>Follow us on Instagram</p>
+            <p className='lg:text-[32px] md:text-[28px] text-[20px] text-center font-semibold'>Follow us on Instagram</p>
         </div>
         <div className='flex gap-2'>
             <div><img src={first}></img></div>

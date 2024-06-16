@@ -32,13 +32,13 @@ function Brands() {
     <section className="mt-5 mb-2 md:container md:mx-auto md:px-28">
       <div className="md:flex items-center justify-between">
         {data.map((item, index) => (
-          <div className="md:flex items-center justify-between gap-12">
-            <div className="">
+          <div className="md:flex items-center justify-between gap-12 mb-2">
+            <div className="flex items-center justify-center">
               <img src={item.img} className="h-[32px]"></img>
             </div>
 
             <div className="items-center justify-between">
-              <LuTally1 size={40} color="#E6E6E6"/>
+              <LuTally1 size={40} color="#E6E6E6" className="hidden lg:block"/>
             </div>
           </div>
         ))}

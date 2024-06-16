@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FilterProvider } from '../components/Shop/FilterContext';
 import { Breadcrumb } from "../components/Shop/Breadcrumbs";
 import Topshop from "../components/Shop/Topshop";
 import Product from "../components/Shop/Product";
@@ -7,8 +8,9 @@ import Card from "../components/Shopcomponents/Card";
 import Pagination from "../components/Shop/Pagination";
 
 function Shop() {
+  
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 21; // Example total pages
+  const totalPages = 2; // Example total pages
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -65,9 +67,14 @@ function Shop() {
   return (
     <div>
       <Breadcrumb />
-      <Topshop/>
-      <Product />
-      
+      {/* <Topshop/>
+      <Product /> */}
+      <FilterProvider>
+      <div className="">
+        <Topshop />
+        <Product />
+      </div>
+    </FilterProvider>
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}

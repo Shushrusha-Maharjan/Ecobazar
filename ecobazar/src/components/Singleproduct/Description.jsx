@@ -88,8 +88,8 @@ import { RiLeafLine } from "react-icons/ri";
 
 const Description = () => {
   return (
-    <section className="md:flex md:justify-center md:mx-auto md:px-28">
-      <div className="md:w-2/3 md:pr-4 md:text-gray-500">
+    <section className="md:container lg:flex lg:justify-center md:mx-auto ">
+      <div className="lg:w-2/3 md:pr-4 md:text-gray-500">
         <div className="text-gray-500">
           <p className="mb-4 text-[14px] mt-5">
             Sed commodo aliquam dui ac porta. Fusce ipsum felis, imperdiet
@@ -125,8 +125,8 @@ const Description = () => {
           </p>
         </div>
       </div>
-      <div className="md:w-1/3 md:flex md:flex-col md:items-center">
-        <div className="md:mb-4 md:mt-5">
+      <div className="lg:w-1/3 lg:flex lg:flex-col lg:items-center">
+        <div className="lg:mb-4 lg:mt-5">
           <div className="aspect-video">
             <iframe
               className="h-full w-full rounded-lg"

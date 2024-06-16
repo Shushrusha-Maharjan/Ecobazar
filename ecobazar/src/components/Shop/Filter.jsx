@@ -5,12 +5,12 @@ const Filter = () => {
   const products = useSelector((state) => state.products.filteredProducts);
   // console.log(products);
   return (
-    <section className="grid grid-cols-3 gap-4">
+    <section className="md:container md:grid lg:grid-cols-3 md:grid-cols-3 gap-4">
       {products
         // .filter((product) => product.tag === tag)
         .map((product, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="">
               <Card
                 id={product.id}
                 image={product.image}

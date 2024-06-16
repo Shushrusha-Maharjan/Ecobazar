@@ -13,13 +13,13 @@ const Priceslider = () => {
   };
   return (
     <div>
-      <div className=" border-b pb-4">
+      <div className=" border-b pb-4 px-4">
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-medium text-[#1A1A1A] cursor-pointer">
+          <h2 className="text-xl font-medium text-[#1A1A1A] cursor-pointer mt-10">
             Price
           </h2>
         </div>
-        <Box sx={{ width: 250 }}>
+        <Box sx={{ width: 220 }}>
           <Slider
             getAriaLabel={() => "Temperature range"}
             value={value}

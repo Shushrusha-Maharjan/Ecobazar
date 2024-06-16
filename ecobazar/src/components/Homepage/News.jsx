@@ -160,27 +160,27 @@ const data = [
 
 function News() {
   return (
-    <section className="mt-5 mb-2 md:container md:mx-auto md:px-28">
+    <section className="mt-5 mb-2 md:container md:mx-auto lg:px-28 md:px-10">
       <div className="items-center justify-center text-[32px]">Latest News</div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
 
         {data.map((item, index) => (
-          <div className="rounded-t-[10px] border-[1px] space-y-3 pb-6 relative" key={index}>
+          <div className="rounded-t-[10px] border-[1px] space-y-3 pb-6 md:relative" key={index}>
             <img src={item.img} alt="" className="w-full" />
             <div className="md:container md:mx-auto md:px-28  pr-6 rounded-t-[10px]">
-              <div className="absolute bg-white w-[58px] h-[58px] left-[16px] rounded-[4px] mt-[-86px] flex flex-col justify-center items-center">
-                <p className="pt-[7px] text-center">{item.day}</p>
-                <p className="text-center">{item.month}</p>
+              <div className="md:absolute bg-white opacity-75 lg:w-[58px] lg:h-[58px] md:w-[45px] md:h-[45px] lg:left-[16px] md:left-[10px] rounded-[4px] lg:mt-[-86px] md:mt-[-66px] flex flex-col justify-center items-center">
+                <p className="pt-[5px] text-center md:text-[12px] lg:text-[14px]">{item.day}</p>
+                <p className="text-center md:text-[12px] lg:text-[14px]">{item.month}</p>
               </div>
             </div>
-            <div className="flex gap-5 space-y-2 pl-2">
-              <div className="flex gap-2 space-y-2"><GoTag className="mt-2" /> <p className="text-sm">{item.category}</p></div>
-              <div className="flex gap-2"><IoPersonOutline /><p className="text-sm">{item.type}</p></div>
-              <div className="flex gap-2"><FaRegCommentAlt /><p className="text-sm">{item.comments}</p></div>
+            <div className="md:flex lg:gap-5 md:gap-3 space-y-2 pl-2">
+              <div className="flex lg:flex lg:gap-2 space-y-2"><GoTag className="mt-2" /> <p className="lg:text-sm md:text-[8px] text-[12px]">{item.category}</p></div>
+              <div className="flex lg:flex lg:gap-2 md:gap-1"><IoPersonOutline /><p className="lg:text-sm md:text-[8px] text-[12px]">{item.type}</p></div>
+              <div className="flex lg:flex lg:gap-2 md:gap-1"><FaRegCommentAlt /><p className="lg:text-sm md:text-[8px] text-[12px]">{item.comments}</p></div>
             </div>
-            <div className="mt-3 pl-2"><p className="font-size-[18px] leading-[27px]">{item.title}</p></div>
+            <div className="mt-3 pl-2"><p className="lg:font-size-[18px] lg:leading-[27px] md:text-[14px] md:leading-[17px]">{item.title}</p></div>
             <div className="flex items-center gap-2 text-primary text-base pl-2">
-              <p className="leading-[19.2px] text-[16px]">Read More</p> <GoArrowRight />
+              <p className="lg:leading-[19.2px] lg:text-[16px] md:text-[14px] md:leading-10">Read More</p> <GoArrowRight />
             </div>
           </div>
         ))}

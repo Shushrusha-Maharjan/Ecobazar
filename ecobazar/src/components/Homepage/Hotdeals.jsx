@@ -4,28 +4,31 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { Rating } from "flowbite-react";
-import { data } from "../../Data/Data";
+import { datas } from "../../Data/db";
 import Timer from "./Timer";
+import Card from "../Shopcomponents/Card";
 
 function Hotproducts() {
   return (
-    <section className="mt-5 mb-2 md:container md:mx-auto md:px-28">
+    <section className="mt-5 mb-2 md:container md:mx-auto lg:px-28 md:px-10">
       <div className="">
-        <div className="flex justify-between">
+        <div className="flex justify-between mb-3">
           <div className="text-xl font-medium">Hot Deals</div>
           <div className="flex items-center gap-2 text-primary">
             View All <GoArrowRight />
           </div>
         </div>
 
-        <div className="md:grid grid-cols-10">
-          {data.offerone.map((item, index) => (
-            <div className="col-span-4 row-span-2 items-center justify-center">
+        <div className="md:grid lg:grid-cols-10 md:grid-cols-9">
+          {datas
+          .filter((item) => item.offerone === true)
+          .map((item, index) => (
+            <div className="lg:col-span-4 lg:row-span-2 md:col-span-6 md:row-span-2 items-center justify-center">
               <div
                 key={index}
-                className="group/item flex flex-col items-center relative"
+                className="group/item md:flex flex-col items-center relative"
               >
-                <div className="border-[1px] hover:border-[#20B526]">
+                <div className="rounded-[10px] border-[1px] hover:border-[#20B526]">
                   <img src={item.img} alt="" className="" />
                   <div className="items-center">
                     <div className="flex flex-row justify-between">
@@ -39,10 +42,10 @@ function Hotproducts() {
                         <IoEyeOutline className="" />
                       </div>
                     </div>
-                    <p className="text-center text-xl text-green-600 ml-3 mt-4">
+                    <p className="text-center text-xl leading-10 text-green-600 ml-3 mt-4">
                       {item.title}
                     </p>
-                    <p className="items-center ml-2 flex justify-center">
+                    <p className="items-center leading-9 ml-2 flex justify-center">
                       {item.price}
                       <span className="ml-2 line-through text-slate-500">
                         {item.initial}
@@ -66,15 +69,15 @@ function Hotproducts() {
                         <Rating.Star fill="orange" fontSize={20} />
                         <Rating.Star fill="orange" fontSize={20} />
                       </Rating>
-                      <p className="text-slate-400 text-center">
+                      <p className="text-slate-400 lg:leading-7 text-center">
                         (524 Feedback)
                       </p>
                     </div>
                     <div>
-                      <p className="text-slate-400 text-center mt-1">
+                      <p className="text-slate-400 lg:leading-10 text-center mt-1">
                         Hurry Up! Offers ends In:
                       </p>
-                      <div className="flex justify-center mb-[9px] pb-[1px]">
+                      <div className="flex justify-center lg:mb-[9px] lg:pb-[20px]">
                         <Timer className="" />
                       </div>
                     </div>
@@ -83,38 +86,111 @@ function Hotproducts() {
               </div>
             </div>
           ))}
-          {data.offerdata
+          {datas
   .filter(item => item.hotdeals === true) // Filter items where hotdeal is true
   .map((item, index) => (
-    <div className="col-span-2 grid" key={index}>
-      <div className="group/item relative">
-        <div className="border-[1px] hover:border-[#20B526] py-[9px]">
+    
+    <div className="lg:col-span-2 md:col-span-3 h-full md:w-full" key={index}>
+      <Card
+                id={index}
+                image={item.img}
+                name={item.title}
+                price={item.price}
+                salePrice={item.initial}
+                sale={item.sale}
+                rating={item.rating}
+                outOfStock={item.outOfStock}
+                className="md:h-full" 
+              />
+      {/* <div className="group/item flex flex-col items-center bg-white shadow-md rounded-lg border-[1px] pb-3 relative group">
+          <div className="mt-2 px-[-20px] hover:border-[#20B526]">
+            {item.sale && (
+              <div className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded absolute top-5 left-5">
+                Sale 50%
+              </div>
+            )}
+            {item.outOfStock && (
+              <div className="bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded absolute top-5 left-5">
+                Out of Stock
+              </div>
+            )}
+            <img
+              src={item.img}
+              alt={item.title}
+              className="w-full h-[250px] object-cover rounded"
+            />
+            <div className="mt-4 ml-4 items-center justify-center">
+              <h3 className="text-lg font-semibold">{item.title}</h3>
+              <p className="text-gray-600">{item.sale ? item.initial : item.price}</p>
+              <div className="flex items-center">
+                <span className="text-[#FFA500] text-[24px]">
+                  {"★".repeat(Math.round(item.rating))}
+                </span>
+                <span className="text-gray-400 text-[24px]">
+                  {"★".repeat(5 - Math.round(item.rating))}
+                </span>
+              </div>
+            </div>
+            <div className="absolute top-4 right-3 flex flex-col justify-between">
+              <div className="group/edit invisible flex flex-col gap-3 group-hover/item:visible">
+                <div className="group-hover/edit w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white group-hover/edit:bg-primary">
+                  <IoHeartOutline className="w-5 h-5" />
+                </div>
+                <div className="group-hover/edit w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white group-hover/edit:bg-primary">
+                  <IoEyeOutline className="w-5 h-5" />
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-5 right-4 w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white">
+              <HiOutlineShoppingBag className="w-5 h-5" />
+            </div>
+          </div>
+        </div> */}
+
+
+
+        
+      {/* <div className="group/item relative group"> */}
+        {/* <div className="border-[1px] hover:border-[#20B526] py-[9px] group">
           <img src={item.img} alt="" className="" />
           <div className="items-center mb-3">
-            <p className="ml-2">{item.title}</p>
+            <p className="ml-2 group-hover:text-[#2C742F]">{item.title}</p>
             <p className="ml-2 flex">
               {item.price}
-              <span className="ml-2 line-through">{item.initial}</span>
+              <span className="ml-2 line-through text-gray-500">{item.initial}</span>
             </p>
             {item.sale && (
               <span className="absolute bg-[#EA4B48] text-white text-[14px] px-[8px] py-[8px] rounded-md top-[16px] left-[16px]">
                 Sale 20%
               </span>
             )}
-            <div className="mb-4">
-              <div>
-                <Rating className="">
-                  <Rating.Star fill="orange" fontSize={20} />
-                  <Rating.Star fill="orange" fontSize={20} />
-                  <Rating.Star fill="orange" fontSize={20} />
-                  <Rating.Star fill="orange" fontSize={20} />
-                  <Rating.Star filled={false} fontSize={20} />
-                </Rating>
+            <div className="-mb-3 pl-2">
+            <div className="flex items-center">
+                <span className="text-[#FFA500] text-[24px]">
+                  {"★".repeat(Math.round(item.rating))}
+                </span>
+                <span className="text-gray-400 text-[24px]">
+                  {"★".repeat(5 - Math.round(item.rating))}
+                </span>
               </div>
+              
             </div>
           </div>
-        </div>
-        <div className="absolute top-4 right-4 flex flex-col justify-between">
+        </div> */}
+        {/* <div className="absolute top-4 right-3 flex flex-col justify-between">
+              <div className="group/edit invisible flex flex-col gap-3 group-hover/item:visible">
+                <div className="group-hover/edit w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white group-hover/edit:bg-primary">
+                  <IoHeartOutline className="w-5 h-5" />
+                </div>
+                <div className="group-hover/edit w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white group-hover/edit:bg-primary">
+                  <IoEyeOutline className="w-5 h-5" />
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-5 right-4 w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white">
+              <HiOutlineShoppingBag className="w-5 h-5" />
+            </div> */}
+        {/* <div className="absolute top-4 right-4 flex flex-col justify-between">
           <div className="group/edit invisible flex flex-col gap-3 group-hover/item:visible">
             <div className="group-hover/edit w-6 h-6 bg-slate-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white group-hover/edit:bg-primary">
               <IoHeartOutline className="" />
@@ -126,8 +202,8 @@ function Hotproducts() {
           <div className="mt-32 w-6 h-6 bg-slate-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white group-hover/edit:bg-slate-400">
             <HiOutlineShoppingBag className="" />
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   ))}
 

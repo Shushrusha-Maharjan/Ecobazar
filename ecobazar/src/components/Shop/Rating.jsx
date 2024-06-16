@@ -8,7 +8,7 @@ const Rating = () => {
   };
 
   return (
-    <div className="mb-4 mt-5">
+    <div className="mb-4 mt-5 pl-3">
       <label className="block text-xl font-semibold mb-4">Rating</label>
       <div className="flex flex-col space-y-2">
         {['5', '4', '3', '2', '1'].map((rating) => (

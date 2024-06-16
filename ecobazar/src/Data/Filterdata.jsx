@@ -26,7 +26,7 @@ const data=[
       sort:"Latest"
     },
     {
-      "id": 2,
+      id: 2,
       "name": "Chinese Cabbage",
       "price": 14.99,
       "rating": 4.0,

@@ -202,14 +202,14 @@ const Index = () => {
   const products = useSelector((state) => state.products.filteredProducts);
 
   const product = products.find((product) => product.id === parseInt(id));
-  console.log(product)
+  console.log(product);
 
   if (!product) {
     return <div>Product not found</div>;
   }
 
   return (
-    <section className="mt-5 mb-2 md:container md:mx-auto md:px-28">
+    <section className="mt-5 mb-2 md:container md:mx-auto lg:px-28 md:px-10">
       <div className="mx-auto bg-white rounded-md">
         <div key={product.id}>
           <div className="md:grid grid-cols-2">
@@ -224,6 +224,7 @@ const Index = () => {
               outOfStock={product.outOfStock}
             />
             <Singlecart
+              id={product.id}
               image={product.image}
               name={product.name}
               price={product.price}

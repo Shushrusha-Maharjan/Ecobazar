@@ -5,7 +5,7 @@ import Footers from "../src/components/Homepage/Footers";
 import { useSelector, useDispatch } from "react-redux";
 
 function App() {
-  const cart = useSelector((state) => state.cart.items);
+  const cart = useSelector((state) => state.cart.cart);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   console.log("cart", cart);

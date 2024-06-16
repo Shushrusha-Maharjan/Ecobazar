@@ -5,15 +5,15 @@ import { FaChevronUp } from "react-icons/fa";
 const Sidecart = ({image, price, sale, salePrice, rating, outOfStock, name }) => {
   return (
     <section>
-        <div className="flex">
-            <div className="w-[80px] pr-4">
+        <div className="container md:mx-auto md:px-10">
+            {/* <div className="w-[80px] pr-4">
               {/* <Slider {...settings}> */}
               {/* <button onClick={() => Slider && Slider.slickPrev()} class>
                 <div className="pl-7 rounded-full flex items-center justify-center  bg-white hover:bg-primary hover:text-white">
                   <FaChevronUp />
                 </div>
               </button> */}
-
+{/*}
               <div className="space-y-4">
                 {/* {image.map((img, index) => (
                   <div
@@ -37,7 +37,7 @@ const Sidecart = ({image, price, sale, salePrice, rating, outOfStock, name }) =>
                 <FaChevronDown />
               </div> */}
               {/* </Slider> */}
-            </div>
+          {/*}  </div> */}
 
             <div className="w-full">
               <img
@@ -47,7 +47,7 @@ const Sidecart = ({image, price, sale, salePrice, rating, outOfStock, name }) =>
                 className="w-[556px] h-[556px] mb-4"
               />
             </div>
-          </div>
+          {/* </div> */}
     </section>
   )
 }

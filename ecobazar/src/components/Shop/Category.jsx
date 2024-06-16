@@ -21,7 +21,7 @@ const Category = ({ handleChange }) => {
   };
 
   return (
-    <div className="w-64 bg-white shadow rounded p-4 ">
+    <div className="w-64 bg-white shadow rounded p-4">
       <div className="flex justify-between" onClick={handleClick}>
         <div className="">
           <h2 className="text-xl font-semibold mb-4">All Categories</h2>
@@ -32,48 +32,7 @@ const Category = ({ handleChange }) => {
       {showCategories && (
         <ul className="space-y-3 gap-2">
           <Input/>
-            {/* name="Fresh Fruit"
-            total="(25)"
-            value="Fruits"
-            handleChange={handleChange}
-            
-          />
-          <Input
-            name="Vegetables"
-            total="(150)"
-            value="Vegetables"
-            handleChange={handleChange}
-          />
-          <Input
-            name="Cooking"
-            total="(25)"
-            value="cooking"
-            handleChange={handleChange}
-          />
-          <Input
-            name="Snacks"
-            total="(25)"
-            value="snacks"
-            handleChange={handleChange}
-          />
-          <Input
-            name="Beverages"
-            total="(25)"
-            value="beverages"
-            handleChange={handleChange}
-          />
-          <Input
-            name="Beauty & Health"
-            total="(25)"
-            value="beauty"
-            handleChange={handleChange}
-          />
-          <Input
-            name="Bread & Bakery"
-            total="(25)"
-            value="bread"
-            handleChange={handleChange}
-          /> */}
+           
           
         </ul>
       )}

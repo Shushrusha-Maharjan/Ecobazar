@@ -5,9 +5,9 @@ import { NavLink } from "react-router-dom";
 
 export const Breadcrumb = () => {
   return (
-    <section  className="">
+    <section  className="md:container">
       <div className="bg-[url('./assets/img/signin.jpg')] bg-cover h-[120px] top-[195px]">
-        <div className='md:container md:mx-auto md:px-28 flex items-center pt-12'>
+        <div className=' md:mx-auto md:px-10 lg:px-28 flex items-center pt-12'>
           <div className='text-white'><IoHomeOutline size={20}/></div>
           <div className='text-white '><IoIosArrowForward size={30}/></div>
           <div className='text-white'><a >Categories</a></div>
