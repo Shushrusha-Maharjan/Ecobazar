@@ -1,18 +1,19 @@
 {
   "name": "ecobazar",
   "private": true,
+  "homepage": "https://Shushrusha-Maharjan.github.io/Ecobazar",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "homepage": "http://Shushrusha-Maharjan.github.io/Ecobazar/ecobazar",
+  
+  
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
