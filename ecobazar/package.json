@@ -1,6 +1,6 @@
 {
   "name": "ecobazar",
-  "private": true,
+  "private": false,
   "homepage": "https://Shushrusha-Maharjan.github.io/Ecobazar",
   "version": "0.0.0",
   "type": "module",
